@@ -1,6 +1,6 @@
 # Keil Studio Webinar STM32 Devices USB with SD Card
 
-This demo application was shown in the Keil Studio webinar introducing how to work with STM32 devices.
+This demo application was shown in the [Keil Studio webinar introducing how to work with STM32 devices](https://www.arm.com/resources/webinar/keil-studio-session-2-ty).
 
 **USB Device Reference Examples** contain the following projects (in the corresponding subfolders) that implement specific USB Device functionality using the MDK-Middleware USB component:
 
