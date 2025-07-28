@@ -1,0 +1,35 @@
+cbuild-pack:
+  resolved-packs:
+    - resolved-pack: ARM::CMSIS@6.2.0
+      selected-by-pack:
+        - ARM::CMSIS
+        - ARM::CMSIS@^6.0.0
+        - ARM::CMSIS@^6.1.0
+    - resolved-pack: ARM::CMSIS-Compiler@2.1.0
+      selected-by-pack:
+        - ARM::CMSIS-Compiler
+        - ARM::CMSIS-Compiler@^2.0.0
+    - resolved-pack: ARM::CMSIS-Driver@2.10.0
+      selected-by-pack:
+        - ARM::CMSIS-Driver
+        - ARM::CMSIS-Driver@^2.8.0-0
+    - resolved-pack: ARM::CMSIS-Driver_STM32@1.2.0
+      selected-by-pack:
+        - ARM::CMSIS-Driver_STM32
+        - ARM::CMSIS-Driver_STM32@^1.0.0-0
+    - resolved-pack: ARM::CMSIS-RTX@5.9.0
+      selected-by-pack:
+        - ARM::CMSIS-RTX
+        - ARM::CMSIS-RTX@^5.9.0
+    - resolved-pack: Keil::MDK-Middleware@8.1.0
+      selected-by-pack:
+        - Keil::MDK-Middleware
+        - Keil::MDK-Middleware@^8.0.0-0
+    - resolved-pack: Keil::STM32F746G-DISCO_BSP@1.1.0
+      selected-by-pack:
+        - Keil::STM32F746G-DISCO_BSP
+        - Keil::STM32F746G-DISCO_BSP@^1.0.0-0
+    - resolved-pack: Keil::STM32F7xx_DFP@3.1.0
+      selected-by-pack:
+        - Keil::STM32F7xx_DFP
+        - Keil::STM32F7xx_DFP@^3.0.0-0

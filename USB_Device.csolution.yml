@@ -1,0 +1,55 @@
+solution:
+  description: USB Device examples
+  created-for: CMSIS-Toolbox@2.6.0
+  cdefault:
+
+  # List of tested compilers that can be selected
+  select-compiler:
+    - compiler: AC6
+    - compiler: GCC
+    - compiler: IAR
+    - compiler: CLANG
+
+  # List of miscellaneous tool-specific controls
+  misc:
+    - for-compiler: AC6 # GDB requires DWARF 5, remove when using uVision Debugger
+      C-CPP:
+        - -gdwarf-5
+      ASM:
+        - -gdwarf-5
+
+  target-types:
+    - type: STM32F746NGHx
+      device: STM32F746NGHx
+      board: STM32F746G-DISCO:Rev.B
+      variables:
+        - Board-Layer: $SolutionDir()$/Board/STM32F746G-DISCO/Board.clayer.yml
+          copied-from: ${CMSIS_PACK_ROOT}/Keil/STM32F746G-DISCO_BSP/1.1.0/Layers/Default/Board.clayer.yml
+    - type: CustomHW
+      device: STM32F746NGHx
+      board: STM32F746G-DISCO:Rev.B
+      variables:
+        - Board-Layer: $SolutionDir()$/Board/CustomHW/Board.clayer.yml
+          copied-from: ${CMSIS_PACK_ROOT}/Keil/STM32F746G-DISCO_BSP/1.1.0/Layers/Default/Board.clayer.yml
+    # - type: <target_name>
+    #   board: <board_name>
+    #   variables:
+    #     - Board-Layer: <board_layer>.clayer.yml
+
+  build-types:
+    - type: Debug
+      debug: on
+      optimize: debug
+    - type: Release
+      debug: off
+      optimize: balanced
+
+  projects:
+    - project: HID/HID.cproject.yml
+    - project: MassStorage/MassStorage.cproject.yml
+    - project: VirtualCOM/VirtualCOM.cproject.yml
+  packs:
+    - pack: Keil::STM32F746G-DISCO_BSP
+    - pack: Keil::STM32F7xx_DFP
+    - pack: ARM::CMSIS
+  compiler: AC6
